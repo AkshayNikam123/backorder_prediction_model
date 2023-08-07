@@ -32,17 +32,24 @@ https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/ma
    ```bash
    conda create -p venv python=3.11 -y
    ```
+
+
 2. Activate the Conda Environment:
    ```bash
    conda activate venv/
+   ```
+
 
 3. upgrade pip:
    ```bash
    python -m pip install --upgrade pip
+   ```
 
+   
 4. Install build package:
    ```bash
    python -m pip install --upgrade build
+   ```
 
 5. Install the Required Packages from setup.py
    ```bash
