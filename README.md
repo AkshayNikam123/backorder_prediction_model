@@ -3,6 +3,10 @@
 This project aims to predict the likelihood of backorders for products in a supply chain using machine learning techniques. Backorders occur when a product is temporarily out of stock, and customers need to wait for it to become available again. By predicting potential backorders, businesses can proactively manage their inventory and improve customer satisfaction.
 
 ## Project Demo Video Link :
+```bash
+https://clipchamp.com/watch/l1kn991yjXG
+```
+
 
 
 ## Variables
@@ -22,39 +26,45 @@ This project aims to predict the likelihood of backorders for products in a supp
 
 ## Dataset
 ```bash
-   https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/main/backorderdata.csv.gz
-
-
+https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/main/backorderdata.csv.gz
 
 
 
 ## Installation Procedure:
 
 1.Create a New Conda Environment:
-   ```bash    
-    conda create -p venv python=3.11 -y
+   ```bash
+   conda create -p venv python=3.11 -y
 
 2. Activate the Conda Environment:
    ```bash
    conda activate venv/
+   ```
+
 
 3. upgrade pip:
    ```bash
    python -m pip install --upgrade pip
+   ```
 
+   
 4. Install build package:
    ```bash
    python -m pip install --upgrade build
+   ```
 
 5. Install the Required Packages from setup.py
    ```bash
    python -m build
+
+
 
 6. This command will output a lot of text and once completed should generate two files in the dist directory:
    ```bash
    dist/
    ├── example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
    └── example_package_YOUR_USERNAME_HERE-0.0.1.tar.gz
+   
 7. Install the Distribution File:
    ```bash
    python -m pip install dist/example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
