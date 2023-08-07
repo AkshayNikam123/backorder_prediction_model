@@ -23,7 +23,7 @@ This project aims to predict the likelihood of backorders for products in a supp
 ## Dataset
 ```bash
 https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/main/backorderdata.csv.gz
-
+```
 
 
 ## Installation Procedure:
@@ -31,7 +31,7 @@ https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/ma
 1.Create a New Conda Environment:
    ```bash
    conda create -p venv python=3.11 -y
-
+   ```
 2. Activate the Conda Environment:
    ```bash
    conda activate venv/
