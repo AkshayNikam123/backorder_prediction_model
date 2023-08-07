@@ -28,7 +28,7 @@ https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/ma
 
 ## Installation Procedure:
 
-1.Create a New Conda Environment:
+1. Create a New Conda Environment:
    ```bash
    conda create -p venv python=3.11 -y
    ```
@@ -55,11 +55,14 @@ https://github.com/AkshayNikam123/internship_backorder_prediction_project/raw/ma
    ```bash
    python -m build
 
+
+
 6. This command will output a lot of text and once completed should generate two files in the dist directory:
    ```bash
    dist/
    ├── example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
    └── example_package_YOUR_USERNAME_HERE-0.0.1.tar.gz
+   
 7. Install the Distribution File:
    ```bash
    python -m pip install dist/example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
