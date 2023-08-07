@@ -32,26 +32,30 @@ class ModelEvaluation:
         except Exception as e:
             raise backorderException(e, sys) from e
 
+
+
     def get_best_model(self):
-        try:         
+        try:
             model = None
             model_evaluation_file_path = self.model_evaluation_config.model_evaluation_file_path
 
-            if not os.path.exists(model_evaluation_file_path): #it will run only at  the start when no model is there
-                write_yaml_file(file_path=model_evaluation_file_path,
-                                )
+            if not os.path.exists(model_evaluation_file_path):
+                write_yaml_file(file_path=model_evaluation_file_path, content={})  # Provide the content to write
                 return model
+
             model_eval_file_content = read_yaml_file(file_path=model_evaluation_file_path)
 
-            model_eval_file_content = dict() if model_eval_file_content is None else model_eval_file_content #gets empty dict if none and if avilable directly pass that file
+            if model_eval_file_content is None:
+                model_eval_file_content = {}  # Initialize an empty dictionary
 
-            if BEST_MODEL_KEY not in model_eval_file_content:
-                return model
+            if BEST_MODEL_KEY in model_eval_file_content:
+                model = load_object(file_path=model_eval_file_content[BEST_MODEL_KEY][MODEL_PATH_KEY])
 
-            model = load_object(file_path=model_eval_file_content[BEST_MODEL_KEY][MODEL_PATH_KEY])
             return model
         except Exception as e:
-            raise backorderException(e, sys) from e
+            # Log the exception here for debugging
+            raise BackorderException(e, sys) from e
+
 
     def update_evaluation_report(self, model_evaluation_artifact: ModelEvaluationArtifact):#function update/replace model when model acc > base model(model in production)
         try:
